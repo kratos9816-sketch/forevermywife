@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+  
+  body {
+    background-color: #040B08;
+    color: #F4ECE1;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    overflow-x: hidden;
+  }
+
+  /* Custom Luxury Scrollbar - Sage & Deep Forest */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #040B08;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #577969;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #7A9A8B;
+  }
+}
+
+/* Luxury Font Families */
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-cormorant {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-script {
+  font-family: 'Alex Brush', cursive;
+}
+
+.font-greatvibes {
+  font-family: 'Great Vibes', cursive;
+}
+
+/* Cream & Sage Gradient Text (No Gold / No Burgundy) */
+.text-cream-gradient {
+  background: linear-gradient(135deg, #FFFFFF 0%, #FAF6EE 35%, #F4ECE1 65%, #DFD2BD 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-cream-shimmer {
+  background: linear-gradient(
+    90deg,
+    #EBE0CF 0%,
+    #FFFFFF 25%,
+    #EBE0CF 50%,
+    #FFFDF9 75%,
+    #EBE0CF 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 5s linear infinite;
+}
+
+.text-sage-gradient {
+  background: linear-gradient(135deg, #FAF6EE 0%, #C4D6CD 40%, #9EB8AB 70%, #577969 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Luxury Forest & Cream Glassmorphism Cards */
+.glass-forest-card {
+  background: rgba(8, 23, 17, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(196, 214, 205, 0.22);
+  box-shadow: 0 15px 35px rgba(4, 11, 8, 0.65), inset 0 0 15px rgba(244, 236, 225, 0.03);
+}
+
+.glass-forest-card:hover {
+  border-color: rgba(196, 214, 205, 0.45);
+  box-shadow: 0 20px 45px rgba(4, 11, 8, 0.85), 0 0 25px rgba(158, 184, 171, 0.2);
+}
+
+.glass-cream-card {
+  background: rgba(247, 241, 230, 0.96);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(122, 154, 139, 0.45);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25), inset 0 0 20px rgba(122, 154, 139, 0.08);
+}
+
+/* Cream & Sage Ornamental Filigree Divider */
+.cream-filigree-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.cream-filigree-divider::before,
+.cream-filigree-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(196, 214, 205, 0.5), transparent);
+}
+
+/* Custom Cursor Styles */
+@media (hover: hover) and (pointer: fine) {
+  body {
+    cursor: none;
+  }
+  a, button, input, [role="button"] {
+    cursor: none;
+  }
+}
